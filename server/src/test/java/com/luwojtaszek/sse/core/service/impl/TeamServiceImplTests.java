@@ -1,6 +1,6 @@
 package com.luwojtaszek.sse.core.service.impl;
 
-import com.luwojtaszek.sse.core.service.OfferService;
+import com.luwojtaszek.sse.core.service.TeamService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,12 +12,12 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @Slf4j
 @RunWith(SpringRunner.class)
-public class OfferServiceImplTests {
+public class TeamServiceImplTests {
 
     @Test
     public void testShuffleOffer() throws Exception {
-        OfferService offerService = new OfferServiceImpl();
-        offerService.shuffleOffer(1).subscribe(offer -> {
+        TeamService teamService = new TeamServiceImpl();
+        teamService.shuffleOffer("1",1).subscribe(offer -> {
             log.info("Got offer: ", offer);
         });
     }
